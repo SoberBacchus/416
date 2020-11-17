@@ -4,4 +4,7 @@ test classes for main.py
 
 """
 
-def 
+#rand seq
+"
+
+def
