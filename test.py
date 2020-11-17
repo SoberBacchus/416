@@ -19,7 +19,7 @@ base = ['A', 'C', 'T', 'G']
 
 def generate_ran_seq():
     """
-    outputs sequence and reads
+    outputs sequence for problem use
     """
     start = time.time()
     seq = ""
@@ -33,6 +33,11 @@ def generate_ran_seq():
 
 def gen_problem():
     g = generate_ran_seq()
+
+
+import main.py
+################ Testing for Main.py functionality ###############
+create_sketch(generate_ran_seq(), 20)
 
 
 generate_ran_seq()
