@@ -4,9 +4,12 @@ for python program
 
 def seq_hash():
     """
+    takes string length lenR and hashes to tuple
     """
 
     #different hash functionality
+    val = {"A": 1, "G": 2, "C": 3, "G": 4}
+
 
 def match_seq():
     """
@@ -15,7 +18,9 @@ def match_seq():
 
     ### compare
 
-    # 
+    # matches based on kmer
+
+    #
 
 def create_sketch():
     """
