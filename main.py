@@ -7,7 +7,7 @@ Easily bypass by doing it before and after method calls.
 """
 import Bio
 
-import random.random as ran
+from random import *
 
 kmerLen = 10
 
@@ -65,8 +65,11 @@ def seq_hash(str):
         numStr.append(val[str[i]])
     for i in range(len(numStr)):
         num+=2**i * numStr[i]
-    return num
-# print(seq_hash("ATG"))
+
+    finVal = (num//1000, num-1000*(num//1000))
+    #collissions will happen
+    return finVal
+print(seq_hash("ATGGATTTTTTTTTTT"))
 
 def match_seq(genome_sketch, read_sketch):
     """
@@ -82,12 +85,14 @@ def match_seq(genome_sketch, read_sketch):
     # matches based on kmer
 
     first_mer = read_sketch[0]
-    if first_mer in genome_sketch:
+    second_mer = read_sketch[0+lenMer]
+    if second_mer in genome_sketch:
         if (len(genome_sketch[first_mer]) > 1):
             print("wow, here's an exception")
 
-        start_pos = first_mer
-    return start_pos
+        start_pos = genome_sketch[second_mer]-lenMer
+
+    return start_pos, start_pos+lenMer
 
 
 def create_sketch(seq, type):
@@ -124,8 +129,11 @@ def m():
         matched.append((first, second, third))
 
     return read_mapped
+#
+# m()
+#
 
-m()
+
 #
 # from Bio import SeqIO
 
