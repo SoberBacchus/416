@@ -30,12 +30,12 @@ def generate_ran_seq():
     seq = ""
     # reads = []
     # seq = ""
-    for i in range(lenG):
+    for i in range(100):
         num = npR.choice(numpy.arange(0, 4), p=[aComp, cComp, tComp, gComp])
         seq+=base[num]
     print("Time elapsed, generate_ran_seq, ", time.time()-start)
     return seq
-
+print(generate_ran_seq())
 def gen_problem():
     g = generate_ran_seq()
     reads = set([])
