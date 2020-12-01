@@ -54,3 +54,6 @@ ex_gen, ex_reads = gen_problem()
 
 def hash(st):
     return st
+=======
+#rand seq
+

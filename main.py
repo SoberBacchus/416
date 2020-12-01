@@ -12,6 +12,7 @@ fileName = ""
 
 
 
+
 def reverse_complement(str):
     """
     Outputs reverse reverse_complement"""
@@ -45,19 +46,6 @@ def part1(sequence, read):
             sketch[hashSequence].add(seqI) #crucial piece that was missing
         else:
             sketch[hashSequence].add(seqI)
-
-def find_Max(dict):
-    """
-    Finds max
-    """
-    Key = -1
-    max = 0
-    for key, val in dict.items():
-        if val > max:
-            max = val
-            Key = key
-    return Key, max
-
 
 def match_seq(sequence, read):
     sequence = sequence
@@ -350,3 +338,17 @@ main(1000)
 # # print("Found %i short sequences" % len(short_sequences))
 # #
 # # SeqIO.write(short_sequences, "short_seqs.fasta", "fasta")
+=======
+
+# from Bio import SeqIO
+
+# short_sequences = []  # Setup an empty list
+# for record in SeqIO.parse("cor6_6.gb", "genbank"):
+#     if len(record.seq) < 300:
+#         # Add this record to our list
+#         short_sequences.append(record)
+
+# print("Found %i short sequences" % len(short_sequences))
+
+# SeqIO.write(short_sequences, "short_seqs.fasta", "fasta")
+
