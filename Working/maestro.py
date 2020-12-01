@@ -3,12 +3,11 @@ n=number
 path1 = "ref.fasta"
 pathX = "sample_2.fastq"
 pathC = "mapping_ground_truth.txt"
-import main
 
 def run():
     print("lets rumblee")
-    import time
     t = time.time()
+    import main
     main.runengine(number, path1, pathX)
     time = time.time()-t
 
