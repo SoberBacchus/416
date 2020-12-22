@@ -13,5 +13,5 @@ useful tool in reconstructing genomes and potentially checking mutations and val
 read maps can also be used to perform ancestral genomic analyses. 
 
 Read mappers need to be fast and accurate. Current gold-standard algorithms are able to accurately
-read on the orders of tens of thousands of reads per minute. In here, we are able to meet the same
+read on the orders of tens of thousands of reads per minute. Here, we are able to meet the same
 precision and accuracy metrics and surpasse them, with a final speed of 1,625 reads/minute. 
